@@ -28,9 +28,17 @@ namespace linklist_final
             processForward.AddForward(30);
             processForward.AddForward(56);
             processForward.DisplayForward();
-            
-           
-           
+            //UC4 Inserting between numbers
+            LinkListProcess processInsert = new LinkListProcess();
+
+            Console.WriteLine("Insert Element sequence 56->30->70 --");
+            processInsert.AddReverse(70);
+            processInsert.AddReverse(30);
+            processInsert.AddReverse(56);
+            processInsert.insertdata(23, 3);
+            processInsert.Displayreverse();
+
+
 
 
         }
@@ -93,7 +101,64 @@ namespace linklist_final
 
             }
         }
-       
+        public void insertdata(int data, int position)
+        {
+           // Console.WriteLine("Total Countpresent=" + countelement());
+            Node node = new Node(data);
+            Console.WriteLine("Insert position=" + position);
+            if (position == 1)
+            {
+                node.next = head;
+                head = node;
+            }
+            else
+            {
+                Node newnode = head, oldnode;
+                int count = 1;
+                while (newnode != null)
+                {
+
+                    oldnode = newnode;
+
+                   // Console.WriteLine("\nDatas =" + newnode.data);
+                    newnode = newnode.next;
+
+                    if (position > countelement() + 1)
+                    {
+                        Console.WriteLine("Index Out of Range");
+                        break;
+                    }
+                    else if (count == position - 1)
+                    {
+
+                        node.next = newnode;
+                        oldnode.next = node;
+                        newnode = head;
+                       // Console.WriteLine("oldnode=" + oldnode.data + " New node=" + newnode.data);
+                        break;
+                    }
+
+                    count++;
+
+                }
+               // Console.WriteLine("Total nodes=" + count);
+
+            }
+
+        }
+        public int countelement()
+        {
+            int count = 0;
+            Node node = head;
+            while (node != null)
+            {
+                count++;
+                node = node.next;
+
+            }
+            return count;
+        }
+
 
         public void DisplayForward()
         {
