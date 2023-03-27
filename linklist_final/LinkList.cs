@@ -14,7 +14,7 @@ namespace linklist_final
         public LinkList() 
         {
             LinkListProcess processing = new LinkListProcess();
-            
+            //UC1,UC2 Sequence 56->30->70
             Console.WriteLine("Reverse--");
             processing.AddReverse(70);
             processing.AddReverse(30);
