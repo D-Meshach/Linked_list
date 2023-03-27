@@ -1,0 +1,8 @@
+D:\Visual_studio_projects\TESTING\linklist_final\linklist_final\bin\Debug\linklist_final.exe.config
+D:\Visual_studio_projects\TESTING\linklist_final\linklist_final\bin\Debug\linklist_final.exe
+D:\Visual_studio_projects\TESTING\linklist_final\linklist_final\bin\Debug\linklist_final.pdb
+D:\Visual_studio_projects\TESTING\linklist_final\linklist_final\obj\Debug\linklist_final.csproj.AssemblyReference.cache
+D:\Visual_studio_projects\TESTING\linklist_final\linklist_final\obj\Debug\linklist_final.csproj.SuggestedBindingRedirects.cache
+D:\Visual_studio_projects\TESTING\linklist_final\linklist_final\obj\Debug\linklist_final.csproj.CoreCompileInputs.cache
+D:\Visual_studio_projects\TESTING\linklist_final\linklist_final\obj\Debug\linklist_final.exe
+D:\Visual_studio_projects\TESTING\linklist_final\linklist_final\obj\Debug\linklist_final.pdb
