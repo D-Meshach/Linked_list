@@ -11,7 +11,7 @@ namespace linklist_final
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Linked List");
-            //LinkList ls = new LinkList();
+            LinkList ls = new LinkList();
         }
     }
 }
