@@ -19,7 +19,20 @@ namespace linklist_final
             processing.AddReverse(70);
             processing.AddReverse(30);
             processing.AddReverse(56);
+           
             processing.Displayreverse();
+            //UC3 Sequence 70->30->56
+            Console.WriteLine("Forward--");
+            LinkListProcess processForward = new LinkListProcess();
+            processForward.AddForward(70);
+            processForward.AddForward(30);
+            processForward.AddForward(56);
+            processForward.DisplayForward();
+            
+           
+           
+
+
         }
        
     }
@@ -63,7 +76,34 @@ namespace linklist_final
             }
         }
 
+        public void AddForward(int data)
+        {
+            Node node = new Node(data);
+            if (this.head == null)
+            {
+                this.head = node;
+                this.start = node;
 
+            }
+            else
+            {
+                head.next = node;
+                node = head;
+                head = node.next;
+
+            }
+        }
+       
+
+        public void DisplayForward()
+        {
+            Node tmp = start;
+            while (tmp != null)
+            {
+                Console.WriteLine("Values are=" + tmp.data);
+                tmp = tmp.next;
+            }
+        }
 
     }
 }
