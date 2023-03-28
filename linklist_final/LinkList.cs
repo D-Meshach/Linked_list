@@ -50,6 +50,16 @@ namespace linklist_final
             processDelete.Displayreverse();
             //processDelete.poplast();
             processDelete.popfirst();
+            //UC6 Delete last element 70
+            LinkListProcess processDeleteLast = new LinkListProcess();
+
+            Console.WriteLine("Delete Top element Element sequence 56->30->70 --");
+            Console.WriteLine("Before Delete");
+            processDeleteLast.AddReverse(70);
+            processDeleteLast.AddReverse(30);
+            processDeleteLast.AddReverse(56);
+            processDeleteLast.Displayreverse();
+            processDeleteLast.poplast();
 
 
 
@@ -184,7 +194,7 @@ namespace linklist_final
         }
         public void popfirst()
         {
-            Console.WriteLine("After Delete top----");
+            Console.WriteLine("After Delete top 56----");
             Node temp = head;
             temp = temp.next;
             while (temp != null)
