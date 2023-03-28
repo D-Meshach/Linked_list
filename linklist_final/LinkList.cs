@@ -35,8 +35,21 @@ namespace linklist_final
             processInsert.AddReverse(70);
             processInsert.AddReverse(30);
             processInsert.AddReverse(56);
-            processInsert.insertdata(23, 3);
+            processInsert.insertdata(23, 2);
             processInsert.Displayreverse();
+            //processInsert.poplast();
+          //UC5 Delete 56 from the list
+            LinkListProcess processDelete = new LinkListProcess();
+
+            Console.WriteLine("Delete Top element Element sequence 56->30->70 --");
+            Console.WriteLine("Before Delete");
+            processDelete.AddReverse(70);
+            processDelete.AddReverse(30);
+            processDelete.AddReverse(56);
+           
+            processDelete.Displayreverse();
+            //processDelete.poplast();
+            processDelete.popfirst();
 
 
 
@@ -79,7 +92,7 @@ namespace linklist_final
             Node tmp=head;
             while (tmp != null)
             {
-                Console.WriteLine("Values are=" + tmp.data);
+                Console.WriteLine("Values=" + tmp.data);
                 tmp = tmp.next;
             }
         }
@@ -165,9 +178,44 @@ namespace linklist_final
             Node tmp = start;
             while (tmp != null)
             {
-                Console.WriteLine("Values are=" + tmp.data);
+                Console.WriteLine("Values=" + tmp.data);
                 tmp = tmp.next;
             }
+        }
+        public void popfirst()
+        {
+            Console.WriteLine("After Delete top----");
+            Node temp = head;
+            temp = temp.next;
+            while (temp != null)
+            {
+                Console.WriteLine("Values=" + temp.data);
+                temp = temp.next;
+            }
+        }
+        public void poplast()
+        {
+            Node temp=head,previous=null;
+           
+            Console.WriteLine("After Poping last elements 70");
+
+            //Console.WriteLine("Values are=" + temp.data);
+            while (temp.next != null)
+            {
+                previous = temp;
+                
+                temp = temp.next;
+            }
+            temp = previous;
+            temp.next = null;
+            temp = head;
+            while (temp != null)
+            {
+                Console.WriteLine("Values are=" + temp.data);
+                temp = temp.next;
+            }
+
+
         }
 
     }
